@@ -5,48 +5,61 @@
 	<title>Gisle Kvalvik | Web Developer</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	 crossorigin="anonymous"></script>
-	<!-- Latest compiled and minified CSS -->
+	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	 crossorigin="anonymous">
-	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 	 crossorigin="anonymous">
-	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	 crossorigin="anonymous"></script>
-	<link href="assets/css/style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Ekko-Lightbox -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.min.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<!-- Custom -->
+	<link href="style.css" rel="stylesheet">
+
 </head>
 
 <body>
+	<img class="under-construction" src="images/under_construction.png" alt="Under Construction">
+
 	<section id="hero-section">
-		<img src="images/under_construction.png" alt="">
 		<div id="hero-container">
-			<span>Hi, I'm Gisle.<br>I am an aspiring full-stack web developer.</span>
+			<span>Hi, I'm Gisle.<br>I am an aspiring software developer.</span>
 		</div>
-		
 	</section>
 
 	<section id="project-section">
 		<div class="container">
 			<h1>Projects</h1>
+			<hr/>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-lg-6">
 					<h2>This Page</h2>
-					<a href="https://github.com/gislek/gislek.github.io"><img src="images/thisPage.png" alt="This page"></a>
+					<a href="images/thisPage.png" data-toggle="lightbox"><img src="images/thisPage.png" alt="This page"></a>
 					<ul>
+						<li><a href="https://github.com/gislek/gislek.github.io"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a></li>
 						<li>HTML</li>
 						<li>CSS</li>
-						<li>Bootstrap</li>
+						<li>JS</li>
 						<li>jQuery</li>
+						<li>Bootstrap</li>
+						<li>Font Awesome</li>
+						<li>Ekko-Lightbox</li>
 					</ul>
 				</div>
-				<div class="col-md-6">
+				<div class="col-lg-6">
 					<h2>GigHub</h2>
-					<a href="https://github.com/gislek/GigHub"><img src="images/gigHub.png" alt="GigHub"></a>
+					<a href="images/gigHub.png" data-toggle="lightbox"><img src="images/gigHub.png" alt="GigHub"></a>
 					<ul>
+						<li><a href="https://github.com/gislek/GigHub"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a></li>
 						<li>HTML</li>
 						<li>CSS</li>
 						<li>JS</li>
@@ -58,10 +71,11 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-lg-6">
 					<h2>Planet Wrox</h2>
-					<a href="https://github.com/gislek/BegASPNET"><img src="images/planetWrox.png" alt="This page"></a>
+					<a href="images/planetWrox.png" data-toggle="lightbox"><img src="images/planetWrox.png" alt="Planet Wrox"></a>
 					<ul>
+						<li><a href="https://github.com/gislek/BegASPNET"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a></li>
 						<li>HTML</li>
 						<li>CSS</li>
 						<li>JS</li>
@@ -75,6 +89,14 @@
 			</div>
 		</div>
 	</section>
+
+	<script>
+		// Lightbox
+		$(document).on('click', '[data-toggle="lightbox"]', function (event) {
+			event.preventDefault();
+			$(this).ekkoLightbox();
+		});
+	</script>
 </body>
 
 </html>
