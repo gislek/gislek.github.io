@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Gisle Kvalvik | Web Developer</title>
+	<title>Gisle Kvalvik | Software Developer</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- jQuery -->
@@ -42,8 +42,11 @@
 			<hr/>
 			<div class="row">
 				<div class="col-lg-6">
-					<h2>This Page</h2>
 					<a href="images/thisPage.png" data-toggle="lightbox"><img src="images/thisPage.png" alt="This page"></a>
+				</div>
+				<div class="col-lg-6">
+					<h2>This Page</h2>
+					<p>This project was created as a portfolio for showcasing some of the things I have developed.</p>
 					<ul>
 						<li><a href="https://github.com/gislek/gislek.github.io"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a></li>
 						<li>HTML</li>
@@ -55,9 +58,19 @@
 						<li>Ekko-Lightbox</li>
 					</ul>
 				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="col-lg-6">
+					<a href="images/gigHub.png" data-toggle="lightbox"><img src="images/gigHub.png" alt="GigHub"></a>
+				</div>
 				<div class="col-lg-6">
 					<h2>GigHub</h2>
-					<a href="images/gigHub.png" data-toggle="lightbox"><img src="images/gigHub.png" alt="GigHub"></a>
+					<p>Gighub is a website for artists to share their upcoming gigs and for music lovers to find and follow their favorite
+						artists and their concerts. The website features ASP.NET accounts, APIs for creating, attending and deleting gigs,
+						and MSSQL database storage.</p>
+					<p>This ASP.NET MVC page was created as part of a code-along project in the course
+						<a href="https://www.pluralsight.com/courses/full-stack-dot-net-developer-fundamentals">Become a Full-stack .NET Developer</a>						and is not currently available online.</p>
 					<ul>
 						<li><a href="https://github.com/gislek/GigHub"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a></li>
 						<li>HTML</li>
@@ -70,10 +83,15 @@
 					</ul>
 				</div>
 			</div>
+			<hr/>
 			<div class="row">
 				<div class="col-lg-6">
-					<h2>Planet Wrox</h2>
 					<a href="images/planetWrox.png" data-toggle="lightbox"><img src="images/planetWrox.png" alt="Planet Wrox"></a>
+				</div>
+				<div class="col-lg-6">
+					<h2>Planet Wrox</h2>
+					<p>Planet Wrox is "music community" where users can review concerts and upload and view Gig Pics.</p>
+					<p>This ASP.NET page was created as part of a code-along project in the book <a href="http://www.wrox.com/WileyCDA/WroxTitle/Beginning-ASP-NET-4-5-1-in-C-and-VB.productCd-111884677X.html">Beginning ASP.NET 4.5.1 in C# and VB</a>						and is a clone of <a href="http://aspnet451.planetwrox.com/">this page.</a></p>
 					<ul>
 						<li><a href="https://github.com/gislek/BegASPNET"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a></li>
 						<li>HTML</li>
@@ -89,12 +107,21 @@
 			</div>
 		</div>
 	</section>
+	<footer>
+		<p>© 2017 Gisle Kvalvik</p>
+	</footer>
 
 	<script>
 		// Lightbox
 		$(document).on('click', '[data-toggle="lightbox"]', function (event) {
 			event.preventDefault();
 			$(this).ekkoLightbox();
+		});
+	</script>
+	<script>
+		// Under construction
+		$(".under-construction").on("click", function () {
+			$(this).hide();
 		});
 	</script>
 </body>
